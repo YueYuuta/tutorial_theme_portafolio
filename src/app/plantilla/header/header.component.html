@@ -1,0 +1,23 @@
+<header class="header">
+    <nav class="nav containerPersonal">
+        <a [routerLink]="['inicio']" class="nav__logo">Junior</a>
+
+        <div class="nav__menu" [ngClass]="showMenu ? 'show-menu ':'hide-menu'">
+            <ul class="nav__list grid">
+                <li class="nav__item" *ngFor="let item of itemsMenu">
+                    <a (click)="cambioEstadoNav(item.ruta)" class="nav__link"><i class="{{item.icono}} nav__icon"></i>
+                        {{item.nombre}}</a>
+                </li>
+            </ul>
+            <i class="fas fa-times nav__close" (click)="cambioEstadoNav()"></i>
+        </div>
+        <div class="nav__btns">
+            <!-- cambio de tema -->
+            <i class="change-theme" [ngClass]="estadoTheme == 'inicial' ? 'far fa-moon' : 'fas fa-sun'"
+                (click)="cambioTheme()"></i>
+            <div class="nav__toggle" (click)="cambioEstadoNav()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+</header>

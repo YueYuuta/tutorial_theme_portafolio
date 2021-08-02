@@ -1,0 +1,20 @@
+<app-header></app-header>
+<main class="main">
+
+    <router-outlet></router-outlet>
+
+
+    <app-pie-pagina></app-pie-pagina>
+</main>
+<div class="container">
+    <input type="checkbox" id="btn-mas">
+    <div class="redes">
+        <a (click)="colorPurple()" class="colorPurple"></a>
+        <a (click)="colorGreen()" class="colorGreen"></a>
+        <a (click)="colorPink()" class="colorPink"></a>
+
+    </div>
+    <div class="btn-mas">
+        <label for="btn-mas" class="fa fa-plus"></label>
+    </div>
+</div>
